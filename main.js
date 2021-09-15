@@ -67,11 +67,11 @@ class Helios extends utils.Adapter {
     async updateKWL() {
         const statusArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 
-        statusArray.forEach(async (element) => {
+        for (const element of statusArray) {
             if (this.ignorePage.includes(element)) {
                 return;
             }
-            await this.sleep(1000); //wait to prevent a ECONNRESET
+            await this.sleep(500); //wait to prevent a ECONNRESET
             await this.requestClient({
                 method: "post",
                 url: "http://" + this.config.ip + "/data/werte" + element + ".xml",
@@ -99,7 +99,7 @@ class Helios extends utils.Adapter {
                     this.log.error(error);
                     error.response && this.log.error(JSON.stringify(error.response.data));
                 });
-        });
+        }
     }
     async parseResult(xml) {
         const regex = /<ID>(?<ID>v\d{5})<\/ID>\s*?<VA>(?<VALUE>.*?)<\/VA>/gm;
