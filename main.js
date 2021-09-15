@@ -16,9 +16,9 @@ class Helios extends utils.Adapter {
 
     async onReady() {
         this.setState("info.connection", false, true);
-        if (this.config.interval <= 80) {
-            this.log.info("Set interval to minimum 80");
-            this.config.interval = 1;
+        if (this.config.interval <= 25) {
+            this.log.info("Set interval to minimum 25");
+            this.config.interval = 25;
         }
         this.createdDPs = {};
         this.requestClient = axios.create({ httpAgent: new http.Agent({ keepAlive: true }) });
@@ -71,7 +71,7 @@ class Helios extends utils.Adapter {
             if (this.ignorePage.includes(element)) {
                 return;
             }
-            await this.sleep(5000); //wait to prevent a ECONNRESET
+            await this.sleep(1000); //wait to prevent a ECONNRESET
             await this.requestClient({
                 method: "post",
                 url: "http://" + this.config.ip + "/data/werte" + element + ".xml",
