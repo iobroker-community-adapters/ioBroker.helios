@@ -295,7 +295,7 @@ module.exports = {
     v01033: { Beschreibung: "Restlaufzeit", Zugriff: "R", Typ: "char[10]", count: 9, Variable: "v01033", Bemerkung: "RW: in Minuten", Min: 0, Max: 4294967295 },
     v01035: { Beschreibung: "Bypass Raum/Temp.", Zugriff: "RW", Typ: "char[2]", count: 5, Variable: "v01035", Bemerkung: "RW: in °C", Min: 10, Max: 40 },
     v01036: { Beschreibung: "Bypass Min. Außentemp.", Zugriff: "RW", Typ: "char[2]", count: 5, Variable: "v01036", Bemerkung: "RW: in °C", Min: 5, Max: 20 },
-    v01037: { Beschreibung: "Bypass v01037", Zugriff: "RW", Typ: "char[2]", count: 5, Variable: "v01037", Bemerkung: "RW: in °C", Min: 3, Max: 10 },
+    v01037: { Beschreibung: "Offset Zulufttemperatur", Zugriff: "RW", Typ: "char[2]", count: 5, Variable: "v01037", Bemerkung: "RW: in °C", Min: 3, Max: 10 },
     v01041: { Beschreibung: "Auslieferzustand WZU", Zugriff: "RW", Typ: "char[1]", count: 5, Variable: "v01041", Bemerkung: "W: 1 = Reset der individuellen Schaltzeiten", Min: 0, Max: 1 },
     v01042: { Beschreibung: "Werksreset", Zugriff: "RW", Typ: "char[1]", count: 5, Variable: "v01042", Bemerkung: "W: 1 = Reset Start", Min: 0, Max: 1 },
     v01050: { Beschreibung: "Zuluft", Zugriff: "RW", Typ: "char[1]", count: 5, Variable: "v01050", Bemerkung: "RW: Lüfterstufe", Min: 1, Max: 4 },
