@@ -16,19 +16,19 @@ class Helios extends utils.Adapter {
 
     async onReady() {
         this.setState("info.connection", false, true);
-        if (this.config.interval <= 0) {
-            this.log.info("Set interval to minimum 1");
+        if (this.config.interval <= 80) {
+            this.log.info("Set interval to minimum 80");
             this.config.interval = 1;
         }
         this.createdDPs = {};
         this.requestClient = axios.create({ httpAgent: new http.Agent({ keepAlive: true }) });
         this.subscribeStates("*");
+        this.ignorePage = {};
 
         if (!this.config.ip || !this.config.password) {
             this.log.warn("Please enter ip and password");
             return;
         }
-        this.subscribeStates("*");
         this.headers = {
             Accept: "*/*",
             "Accept-Language": "de,en-US;q=0.7,en;q=0.3",
@@ -68,6 +68,10 @@ class Helios extends utils.Adapter {
         const statusArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 
         statusArray.forEach(async (element) => {
+            if (this.ignorePage.includes(element)) {
+                return;
+            }
+            await this.sleep(5000); //wait to prevent a ECONNRESET
             await this.requestClient({
                 method: "post",
                 url: "http://" + this.config.ip + "/data/werte" + element + ".xml",
@@ -87,6 +91,10 @@ class Helios extends utils.Adapter {
                         }, 1000 * 30);
                         return;
                     }
+                    if (error.response && error.response.status === 404) {
+                        this.ignorePage.push(element);
+                        this.log.info("Ignore Page " + element + " because no information found");
+                    }
                     this.log.error("Page: " + element);
                     this.log.error(error);
                     error.response && this.log.error(JSON.stringify(error.response.data));
@@ -98,8 +106,15 @@ class Helios extends utils.Adapter {
         const elements = this.matchAll(regex, xml);
         for (const element of elements) {
             let { ID, VALUE } = element.groups;
-            if (Number(VALUE) !== NaN) {
+            let type = "mixed";
+            if (!ID) {
+                this.log.warn("Empty ID");
+                this.log.warn(xml);
+                return;
+            }
+            if (VALUE !== "" && Number(VALUE) !== NaN) {
                 VALUE = Number(VALUE);
+                type = "number";
             }
             let dataObject = {
                 Beschreibung: ID,
@@ -117,7 +132,7 @@ class Helios extends utils.Adapter {
                     name: dataObject.Bemerkung,
                     role: "state",
                     variable: dataObject.Variable,
-                    type: typeof VALUE,
+                    type: type,
                     write: writable,
                     read: true,
                 };
@@ -140,7 +155,11 @@ class Helios extends utils.Adapter {
                         this.log.error(error);
                     });
             }
-            this.setState(path, VALUE, true);
+            this.setState(path, VALUE, true).catch((error) => {
+                this.log.error(ID);
+                this.log.error(JSON.stringify(dataObject));
+                this.log.error(error);
+            });
         }
     }
     matchAll(re, str) {
@@ -150,6 +169,9 @@ class Helios extends utils.Adapter {
             matches.push(match);
         }
         return matches;
+    }
+    sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
     }
     onUnload(callback) {
         try {

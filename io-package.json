@@ -82,7 +82,7 @@
     "native": {
         "ip": "",
         "password": "",
-        "interval": 10
+        "interval": 80
     },
     "objects": [],
     "instanceObjects": [
