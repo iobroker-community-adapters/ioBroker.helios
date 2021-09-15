@@ -1,0 +1,111 @@
+{
+    "common": {
+        "name": "helios",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "titleLang": {
+            "en": "Helios KWL",
+            "de": "Helios KWL",
+            "ru": "Гелиос КВЛ",
+            "pt": "Helios KWL",
+            "nl": "Helios KWL",
+            "fr": "Hélios KWL",
+            "it": "Helios KWL",
+            "es": "Helios KWL",
+            "pl": "Helios KWL",
+            "zh-cn": "太阳神KWL"
+        },
+        "desc": {
+            "en": "Helios KWL easyControls",
+            "de": "Helios KWL easyControls",
+            "ru": "Гелиос KWL easyControls",
+            "pt": "Helios KWL easyControls",
+            "nl": "Helios KWL easyControls",
+            "fr": "Helios KWL easyControls",
+            "it": "Helios KWL easyControls",
+            "es": "Helios KWL easyControls",
+            "pl": "Helios KWL easyControls",
+            "zh-cn": "Helios KWL easyControls"
+        },
+        "authors": [
+            "KLVN"
+        ],
+        "keywords": [
+            "helios",
+            "kwl",
+            "easycontrols"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "helios.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.helios/master/admin/helios.png",
+        "readme": "https://github.com/iobroker-community-adapters/ioBroker.helios/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "climate-control",
+        "compact": true,
+        "connectionType": "local",
+        "dataSource": "poll",
+        "materialize": true,
+        "dependencies": [
+            {
+                "js-controller": ">=3.0.0"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=4.0.9"
+            }
+        ]
+    },
+    "encryptedNative": [
+        "password"
+    ],
+    "protectedNative": [
+        "password"
+    ],
+    "native": {
+        "ip": "",
+        "password": "",
+        "interval": 10
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}
