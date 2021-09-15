@@ -28,6 +28,7 @@ class Helios extends utils.Adapter {
             this.log.warn("Please enter ip and password");
             return;
         }
+        this.subscribeStates("*");
         this.headers = {
             Accept: "*/*",
             "Accept-Language": "de,en-US;q=0.7,en;q=0.3",
@@ -36,7 +37,6 @@ class Helios extends utils.Adapter {
             DNT: "1",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36",
         };
-
         await this.login();
         await this.updateKWL();
         this.updateInterval = setInterval(async () => {
@@ -58,6 +58,7 @@ class Helios extends utils.Adapter {
                 this.setState("info.connection", true, true);
             })
             .catch((error) => {
+                this.setState("info.connection", false, true);
                 this.log.error(error);
                 error.response && this.log.error(JSON.stringify(error.response.data));
             });
@@ -107,7 +108,7 @@ class Helios extends utils.Adapter {
             if (datapoints[ID]) {
                 dataObject = datapoints[ID];
             }
-            const path = dataObject.Bezeichnung.replace(/ /g, "_").replace(/\./g, "");
+            const path = dataObject.Beschreibung.replace(/ /g, "_").replace(/\./g, "");
             if (!this.createdDPs[ID]) {
                 const writable = dataObject.Zugriff === "R" ? false : true;
                 const common = {
