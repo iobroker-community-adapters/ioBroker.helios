@@ -16,9 +16,9 @@ class Helios extends utils.Adapter {
 
     async onReady() {
         this.setState("info.connection", false, true);
-        if (this.config.interval <= 25) {
-            this.log.info("Set interval to minimum 25");
-            this.config.interval = 25;
+        if (this.config.interval <= 10) {
+            this.log.info("Set interval to minimum 10");
+            this.config.interval = 10;
         }
         this.createdDPs = {};
         this.requestClient = axios.create({ httpAgent: new http.Agent({ keepAlive: true }) });
