@@ -23,7 +23,7 @@ class Helios extends utils.Adapter {
         this.createdDPs = {};
         this.requestClient = axios.create({ httpAgent: new http.Agent({ keepAlive: true }) });
         this.subscribeStates("*");
-        this.ignorePage = {};
+        this.ignorePage = [];
 
         if (!this.config.ip || !this.config.password) {
             this.log.warn("Please enter ip and password");
