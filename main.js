@@ -97,8 +97,10 @@ class Helios extends utils.Adapter {
         const regex = /<ID>(?<ID>v\d{5})<\/ID>\s*?<VA>(?<VALUE>.*?)<\/VA>/gm;
         const elements = this.matchAll(regex, xml);
         for (const element of elements) {
-            const { ID, VALUE } = element.groups;
-
+            let { ID, VALUE } = element.groups;
+            if (Number(VALUE) !== NaN) {
+                VALUE = Number(VALUE);
+            }
             let dataObject = {
                 Beschreibung: ID,
                 Zugriff: "RW",
