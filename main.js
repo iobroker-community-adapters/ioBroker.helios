@@ -24,6 +24,11 @@ class Helios extends utils.Adapter {
         this.requestClient = axios.create({ httpAgent: new http.Agent({ keepAlive: true }) });
         this.subscribeStates("*");
         this.ignorePage = [];
+        this.completeArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 931];
+        this.updateArray = [2, 3, 4, 5, 6, 8, 12, 15, 16, 17];
+        if (this.config.updateArray) {
+            this.updateArray = this.config.updateArray.replace(/ /g, "").split(",");
+        }
 
         if (!this.config.ip || !this.config.password) {
             this.log.warn("Please enter ip and password");
@@ -38,9 +43,9 @@ class Helios extends utils.Adapter {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36",
         };
         await this.login();
-        await this.updateKWL();
+        await this.updateKWL(this.completeArray);
         this.updateInterval = setInterval(async () => {
-            await this.updateKWL();
+            await this.updateKWL(this.updateArray);
         }, this.config.interval * 1000);
         this.refreshTokenInterval = setInterval(() => {
             this.login();
@@ -64,9 +69,7 @@ class Helios extends utils.Adapter {
             });
     }
 
-    async updateKWL() {
-        const statusArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
-
+    async updateKWL(statusArray) {
         for (const element of statusArray) {
             if (this.ignorePage.includes(element)) {
                 return;
@@ -209,7 +212,7 @@ class Helios extends utils.Adapter {
                     });
                 clearTimeout(this.refreshTimeout);
                 this.refreshTimeout = setTimeout(async () => {
-                    await this.updateKWL();
+                    await this.updateKWL(this.completeArray);
                 }, 10 * 1000);
             }
         }

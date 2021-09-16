@@ -51,4 +51,16 @@ systemDictionary = {
         pl: "Interwał w sekundach",
         "zh-cn": "以秒为单位的间隔",
     },
+    "XML pages to be updated in the interval (1-17)": {
+        en: "XML pages to be updated in the interval (1-17)",
+        de: "XML Seiten die im Intervall geupdateten werden sollen (1-17)",
+        ru: "Страницы XML будут обновляться в интервале (1-17)",
+        pt: "Páginas XML a serem atualizadas no intervalo (1-17)",
+        nl: "XML-pagina's die in het interval moeten worden bijgewerkt (1-17)",
+        fr: "Pages XML à mettre à jour dans l'intervalle (1-17)",
+        it: "Pagine XML da aggiornare nell'intervallo (1-17)",
+        es: "Páginas XML que se actualizarán en el intervalo (1-17)",
+        pl: "Strony XML do aktualizacji w przedziale (1-17)",
+        "zh-cn": "间隔（1-17）更新的XML页面",
+    },
 };
