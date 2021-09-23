@@ -15,7 +15,7 @@
 
 Helios KWL easyControls
 
-Remote Befehle sind möglich unter in dem man in die schreibbaren Datenpunk beschreibt
+Remote Befehle sind möglich, in dem man in die schreibbaren Datenpunkt Werte schreibt.
 
 Datenpunkte zum aktualisieren:
 
