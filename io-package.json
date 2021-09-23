@@ -83,7 +83,7 @@
     "native": {
         "ip": "",
         "password": "",
-        "interval": 15,
+        "interval": 25,
         "updateArray": "3, 4, 8, 12, 16"
     },
     "objects": [],
