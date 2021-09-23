@@ -16,16 +16,16 @@ class Helios extends utils.Adapter {
 
     async onReady() {
         this.setState("info.connection", false, true);
-        if (this.config.interval <= 10) {
-            this.log.info("Set interval to minimum 10");
-            this.config.interval = 10;
+        if (this.config.interval <= 1) {
+            this.log.info("Set interval to minimum 1");
+            this.config.interval = 1;
         }
         this.createdDPs = {};
         this.requestClient = axios.create({ httpAgent: new http.Agent({ keepAlive: true }) });
         this.subscribeStates("*");
         this.ignorePage = [];
         this.completeArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 931];
-        this.updateArray = [2, 3, 4, 5, 6, 8, 12, 15, 16, 17];
+        this.updateArray = [3, 4, 8, 12, 16];
         if (this.config.updateArray) {
             this.updateArray = this.config.updateArray.replace(/ /g, "").split(",");
         }

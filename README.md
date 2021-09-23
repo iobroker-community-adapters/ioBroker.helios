@@ -15,6 +15,32 @@
 
 Helios KWL easyControls
 
+Remote Befehle sind möglich unter in dem man in die schreibbaren Datenpunk beschreibt
+
+Datenpunkte zum aktualisieren:
+
+1: Erstinbetriebnahme (inbetr.htm)  
+2:  
+3: Partybetrieb / Ruhemodus (party.htm + ruhe.htm)  
+4: Aktuelle Lüfterstufe / Modus (info.htm)  
+5: Nachheizung Profil (nachheiz.htm)  
+6: Urlaubsprogramm (urlaub.htm)  
+7: Geräte Daten / Seriennummer usw. (tinfo.htm)  
+8: Systemstatus (Betriebsart, Drehzahl Lüfter, aktuelle Temperaturen) (anzeig.htm)  
+9: Wochenprogramm (woche.htm)  
+10: Netzwerkeinstellung (Ip, DNS, ect.) (web.htm)  
+11: Uhrzeit / Betriebslaufzeit der Vorheizung ect. (syst.htm)  
+12: Gerätekonfiguration / Filterwechsel / Bypass steuern (gaer.htm)  
+13: Voltzahl der Lüfter (luft.htm)  
+14: Konfiguration der Fühler (fueh.htm)  
+15: Passwort ändern (lost.htm)  
+16: Fehler Übersicht (fehl.htm)  
+17:  
+931:  
+
+##Diskussion und Fragen  
+https://forum.iobroker.net/topic/47762/test-helios-kwl-v0-0-x
+
 ## Changelog
 
 ### 0.0.1

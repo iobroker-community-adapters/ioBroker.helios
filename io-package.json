@@ -1,9 +1,9 @@
 {
     "common": {
         "name": "helios",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "news": {
-            "0.0.1": {
+            "0.0.2": {
                 "en": "initial release",
                 "de": "Erstveröffentlichung",
                 "ru": "Начальная версия",
@@ -82,8 +82,8 @@
     "native": {
         "ip": "",
         "password": "",
-        "interval": 30,
-        "updateArray": "2, 3, 4, 5, 6, 8, 12, 15, 16, 17"
+        "interval": 15,
+        "updateArray": "3, 4, 8, 12, 16"
     },
     "objects": [],
     "instanceObjects": [
