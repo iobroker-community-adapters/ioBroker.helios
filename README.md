@@ -38,7 +38,7 @@ Datenpunkte zum aktualisieren:
 17:  
 931:  
 
-##Diskussion und Fragen  
+## Diskussion und Fragen  
 https://forum.iobroker.net/topic/47762/test-helios-kwl-v0-0-x
 
 ## Changelog
