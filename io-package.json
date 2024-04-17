@@ -16,7 +16,6 @@
                 "zh-cn": "首次出版"
             }
         },
-        "title": "Helios KWL",
         "titleLang": {
             "en": "Helios KWL",
             "de": "Helios KWL",
@@ -49,14 +48,17 @@
             "kwl",
             "easycontrols"
         ],
-        "license": "MIT",
+        "licenseInformation": {
+            "license": "MIT",
+            "type": "free"
+        },
         "platform": "Javascript/Node.js",
-        "main": "main.js",
         "icon": "helios.png",
         "enabled": true,
         "extIcon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.helios/master/admin/helios.png",
         "readme": "https://github.com/iobroker-community-adapters/ioBroker.helios/blob/master/README.md",
         "loglevel": "info",
+        "tier": 2,
         "mode": "daemon",
         "type": "climate-control",
         "compact": true,
@@ -65,12 +67,12 @@
         "materialize": true,
         "dependencies": [
             {
-                "js-controller": ">=3.0.0"
+                "js-controller": ">=5.0.19"
             }
         ],
         "globalDependencies": [
             {
-                "admin": ">=4.0.9"
+                "admin": ">=6.13.16"
             }
         ]
     },
