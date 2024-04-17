@@ -1,115 +1,128 @@
 {
-    "common": {
-        "name": "helios",
-        "version": "0.0.3",
-        "news": {
-            "0.0.3": {
-                "en": "initial release",
-                "de": "Erstveröffentlichung",
-                "ru": "Начальная версия",
-                "pt": "lançamento inicial",
-                "nl": "Eerste uitgave",
-                "fr": "Première version",
-                "it": "Versione iniziale",
-                "es": "Versión inicial",
-                "pl": "Pierwsze wydanie",
-                "zh-cn": "首次出版"
-            }
-        },
-        "titleLang": {
-            "en": "Helios KWL",
-            "de": "Helios KWL",
-            "ru": "Гелиос КВЛ",
-            "pt": "Helios KWL",
-            "nl": "Helios KWL",
-            "fr": "Hélios KWL",
-            "it": "Helios KWL",
-            "es": "Helios KWL",
-            "pl": "Helios KWL",
-            "zh-cn": "太阳神KWL"
-        },
-        "desc": {
-            "en": "Helios KWL easyControls",
-            "de": "Helios KWL easyControls",
-            "ru": "Гелиос KWL easyControls",
-            "pt": "Helios KWL easyControls",
-            "nl": "Helios KWL easyControls",
-            "fr": "Helios KWL easyControls",
-            "it": "Helios KWL easyControls",
-            "es": "Helios KWL easyControls",
-            "pl": "Helios KWL easyControls",
-            "zh-cn": "Helios KWL easyControls"
-        },
-        "authors": [
-            "KLVN"
-        ],
-        "keywords": [
-            "helios",
-            "kwl",
-            "easycontrols"
-        ],
-        "licenseInformation": {
-            "license": "MIT",
-            "type": "free"
-        },
-        "platform": "Javascript/Node.js",
-        "icon": "helios.png",
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.helios/master/admin/helios.png",
-        "readme": "https://github.com/iobroker-community-adapters/ioBroker.helios/blob/master/README.md",
-        "loglevel": "info",
-        "tier": 2,
-        "mode": "daemon",
-        "type": "climate-control",
-        "compact": true,
-        "connectionType": "local",
-        "dataSource": "poll",
-        "materialize": true,
-        "dependencies": [
-            {
-                "js-controller": ">=5.0.19"
-            }
-        ],
-        "globalDependencies": [
-            {
-                "admin": ">=6.13.16"
-            }
-        ]
+  "common": {
+    "name": "helios",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": {
+        "en": "Adapter requires node.js 18 and js-controller >= 5 now\nDependencies have been updated",
+        "de": "Adapter benötigt node.js 18 und js-controller >= 5 jetzt\nAbhängigkeiten wurden aktualisiert",
+        "ru": "Адаптер требует node.js 18 и js-controller >= 5 сейчас\nЗависимость обновлена",
+        "pt": "Adapter requer node.js 18 e js-controller >= 5 agora\nAs dependências foram atualizadas",
+        "nl": "Adapter vereist node.js 18 en js-controller Nu 5\nAfhankelijkheden zijn bijgewerkt",
+        "fr": "Adaptateur nécessite node.js 18 et js-controller >= 5 maintenant\nLes dépendances ont été actualisées",
+        "it": "Adattatore richiede node.js 18 e js-controller >= 5 ora\nLe dipendenze sono state aggiornate",
+        "es": "Adaptador requiere node.js 18 y js-controller √= 5 ahora\nSe han actualizado las dependencias",
+        "pl": "Adapter wymaga node.js 18 i sterownika js- > = 5 teraz\nZaktualizowano zależności",
+        "uk": "Адаптер вимагає node.js 18 і js-controller >= 5 тепер\nЗалежність було оновлено",
+        "zh-cn": "适配器需要节点.js 18和js控制器 QQ 现在5号\n依赖关系已更新"
+      },
+      "0.0.3": {
+        "en": "initial release",
+        "de": "Erstveröffentlichung",
+        "ru": "Начальная версия",
+        "pt": "lançamento inicial",
+        "nl": "Eerste uitgave",
+        "fr": "Première version",
+        "it": "Versione iniziale",
+        "es": "Versión inicial",
+        "pl": "Pierwsze wydanie",
+        "zh-cn": "首次出版"
+      }
     },
-    "encryptedNative": [
-        "password"
-    ],
-    "protectedNative": [
-        "password"
-    ],
-    "native": {
-        "ip": "",
-        "password": "",
-        "interval": 25,
-        "updateArray": "3, 4, 8, 12, 16"
+    "titleLang": {
+      "en": "Helios KWL",
+      "de": "Helios KWL",
+      "ru": "Гелиос КВЛ",
+      "pt": "Helios KWL",
+      "nl": "Helios KWL",
+      "fr": "Hélios KWL",
+      "it": "Helios KWL",
+      "es": "Helios KWL",
+      "pl": "Helios KWL",
+      "zh-cn": "太阳神KWL"
     },
-    "objects": [],
-    "instanceObjects": [
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": "Information"
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.connection",
-            "type": "state",
-            "common": {
-                "role": "indicator.connected",
-                "name": "Device or service connected",
-                "type": "boolean",
-                "read": true,
-                "write": false,
-                "def": false
-            },
-            "native": {}
-        }
+    "desc": {
+      "en": "Helios KWL easyControls",
+      "de": "Helios KWL easyControls",
+      "ru": "Гелиос KWL easyControls",
+      "pt": "Helios KWL easyControls",
+      "nl": "Helios KWL easyControls",
+      "fr": "Helios KWL easyControls",
+      "it": "Helios KWL easyControls",
+      "es": "Helios KWL easyControls",
+      "pl": "Helios KWL easyControls",
+      "zh-cn": "Helios KWL easyControls"
+    },
+    "authors": [
+      "KLVN"
+    ],
+    "keywords": [
+      "helios",
+      "kwl",
+      "easycontrols"
+    ],
+    "licenseInformation": {
+      "license": "MIT",
+      "type": "free"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "helios.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.helios/master/admin/helios.png",
+    "readme": "https://github.com/iobroker-community-adapters/ioBroker.helios/blob/master/README.md",
+    "loglevel": "info",
+    "tier": 2,
+    "mode": "daemon",
+    "type": "climate-control",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "materialize": true,
+    "dependencies": [
+      {
+        "js-controller": ">=5.0.19"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=6.13.16"
+      }
     ]
+  },
+  "encryptedNative": [
+    "password"
+  ],
+  "protectedNative": [
+    "password"
+  ],
+  "native": {
+    "ip": "",
+    "password": "",
+    "interval": 25,
+    "updateArray": "3, 4, 8, 12, 16"
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Device or service connected",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
 }
