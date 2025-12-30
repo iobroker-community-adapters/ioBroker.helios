@@ -2,17 +2,11 @@
   "name": "iobroker.helios",
   "version": "0.1.0",
   "description": "Helios KWL easyControls",
-  "author": {
-    "name": "TA2k",
-    "email": "tombox2020@gmail.com"
-  },
+  "author": "TA2k <tombox2020@gmail.com>",
   "contributors": [
-    {
-      "name": "KLVN"
-    },
-    {
-      "name": "TA2k"
-    }
+    "KLVN",
+    "TA2k",
+    "iobroker-community-adapters <iobroker-community-adapters@gmx.de>"
   ],
   "homepage": "https://github.com/iobroker-community-adapters/ioBroker.helios",
   "license": "MIT",
