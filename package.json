@@ -11,6 +11,7 @@
   "homepage": "https://github.com/iobroker-community-adapters/ioBroker.helios",
   "license": "MIT",
   "keywords": [
+    "ioBroker",
     "helios",
     "kwl",
     "easycontrols"
