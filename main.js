@@ -1,7 +1,7 @@
 "use strict";
 const utils = require("@iobroker/adapter-core");
 const axios = require("axios");
-const http = require("http");
+const http = require("node:http");
 const datapoints = require("./datapoints");
 class Helios extends utils.Adapter {
     constructor(options) {
