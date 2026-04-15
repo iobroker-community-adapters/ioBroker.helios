@@ -15,30 +15,30 @@
 
 Helios KWL easyControls
 
-Remote Befehle sind möglich, in dem man in die schreibbaren Datenpunkt Werte schreibt.
+Remote commands are possible by writing values to the writable data points.
 
-Datenpunkte zum aktualisieren:
+Data points to update:
 
-1: Erstinbetriebnahme (inbetr.htm)  
+1: Initial commissioning (inbetr.htm)  
 2:  
-3: Partybetrieb / Ruhemodus (party.htm + ruhe.htm)  
-4: Aktuelle Lüfterstufe / Modus (info.htm)  
-5: Nachheizung Profil (nachheiz.htm)  
-6: Urlaubsprogramm (urlaub.htm)  
-7: Geräte Daten / Seriennummer usw. (tinfo.htm)  
-8: Systemstatus (Betriebsart, Drehzahl Lüfter, aktuelle Temperaturen) (anzeig.htm)  
-9: Wochenprogramm (woche.htm)  
-10: Netzwerkeinstellung (Ip, DNS, ect.) (web.htm)  
-11: Uhrzeit / Betriebslaufzeit der Vorheizung ect. (syst.htm)  
-12: Gerätekonfiguration / Filterwechsel / Bypass steuern (gaer.htm)  
-13: Voltzahl der Lüfter (luft.htm)  
-14: Konfiguration der Fühler (fueh.htm)  
-15: Passwort ändern (lost.htm)  
-16: Fehler Übersicht (fehl.htm)  
+3: Party mode / Quiet mode (party.htm + ruhe.htm)  
+4: Current fan speed / Mode (info.htm)  
+5: Post-heating profile (nachheiz.htm)  
+6: Vacation program (urlaub.htm)  
+7: Device data / Serial number etc. (tinfo.htm)  
+8: System status (operating mode, fan speed, current temperatures) (anzeig.htm)  
+9: Weekly program (woche.htm)  
+10: Network settings (IP, DNS, etc.) (web.htm)  
+11: Time / Operating hours of pre-heating etc. (syst.htm)  
+12: Device configuration / Filter change / Bypass control (gaer.htm)  
+13: Voltage of the fans (luft.htm)  
+14: Sensor configuration (fueh.htm)  
+15: Change password (lost.htm)  
+16: Error overview (fehl.htm)  
 17:  
 931:  
 
-## Diskussion und Fragen  
+## Discussion and Questions  
 https://forum.iobroker.net/topic/47762/test-helios-kwl-v0-0-x
 
 ## Changelog
