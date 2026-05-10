@@ -26,7 +26,8 @@
         "it": "Versione iniziale",
         "es": "Versión inicial",
         "pl": "Pierwsze wydanie",
-        "zh-cn": "首次出版"
+        "zh-cn": "首次出版",
+        "uk": "початковий випуск"
       }
     },
     "titleLang": {
@@ -39,7 +40,8 @@
       "it": "Helios KWL",
       "es": "Helios KWL",
       "pl": "Helios KWL",
-      "zh-cn": "太阳神KWL"
+      "zh-cn": "太阳神KWL",
+      "uk": "Геліос KWL"
     },
     "desc": {
       "en": "Helios KWL easyControls",
@@ -51,7 +53,8 @@
       "it": "Helios KWL easyControls",
       "es": "Helios KWL easyControls",
       "pl": "Helios KWL easyControls",
-      "zh-cn": "Helios KWL easyControls"
+      "zh-cn": "Helios KWL easyControls",
+      "uk": "Helios KWL easyControls"
     },
     "authors": [
       "KLVN",
