@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "helios",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "news": {
+      "0.2.0": {
+        "en": "Adapter requires node.js >= 22 now\nAdapter requires admin >= 7.7.22 now\nAdapter requires js-controller >= 6.0.11 now",
+        "de": "Adapter benötigt node.js >= 22 jetzt\nAdapter benötigt admin >= 7.7.22 jetzt\nAdapter benötigt jetzt js-controller >= 6.0.11",
+        "ru": "Адаптер требует node.js >= 22 сейчас\nАдаптер требует администратора >= 7.7.22\nАдаптер требует js-контроллер >= 6.0.11",
+        "pt": "Adaptador requer nod.js >= 22 agora\nAdaptador requer admin >= 7.7.22 agora\nAdaptador requer js-controlador >= 6.0.11 agora",
+        "nl": "Voor de adapter zijn node.js < 22 nu nodig\nAdapter vereist admin < 7.7.22 nu\nAdapter vereist js-controller < 6,0.11 nu",
+        "fr": "Adaptateur nécessite node.js >= 22 maintenant\nAdaptateur nécessite admin >= 7.7.22 maintenant\nAdaptateur nécessite js-controller >= 6.0.11 maintenant",
+        "it": "Adattatore richiede node.js >= 22 ora\nAdattatore richiede admin >= 7.7.22 ora\nAdattatore richiede js-controller >= 6.0.11 ora",
+        "es": "Adaptador requiere node.js ю= 22 ahora\nEl adaptador requiere administrador= 7.7.22 ahora\nAdaptador requiere js-controller >= 6.0.11",
+        "pl": "Adapter wymaga node.js > = 22\nAdapter wymaga admin > = 7.7.22\nAdapter wymaga sterownika js- > = 6.0.11",
+        "uk": "Адаптер вимагає node.js >= 22 тепер\nАдаптер вимагає адмін >= 7.7.22 тепер\nАдаптер вимагає js-controller >=6.0.11 тепер",
+        "zh-cn": "适配器需要节点.js 现在22\n适任者需要管理员 \\ 7.7.22 现在\n适配器需要js控制器 现在6.0.11"
+      },
       "0.1.0": {
         "en": "Adapter requires node.js 18 and js-controller >= 5 now\nDependencies have been updated",
         "de": "Adapter benötigt node.js 18 und js-controller >= 5 jetzt\nAbhängigkeiten wurden aktualisiert",

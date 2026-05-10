@@ -46,8 +46,7 @@ https://forum.iobroker.net/topic/47762/test-helios-kwl-v0-0-x
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
-
-### **WORK IN PROGRESS**
+### 0.2.0 (2026-05-10)
 - (copilot) Adapter requires node.js >= 22 now
 - (copilot) Adapter requires admin >= 7.7.22 now
 - (copilot) Adapter requires js-controller >= 6.0.11 now
@@ -59,9 +58,8 @@ https://forum.iobroker.net/topic/47762/test-helios-kwl-v0-0-x
 ### 0.0.1
 * (iobroker-community-adapters) initial release
 
-[Older changelogs can be found there](CHANGELOG_OLD.md)
 
-## License
+[Older changelogs can be found there](CHANGELOG_OLD.md)## License
 MIT License
 
 Copyright (c) 2021-2026 iobroker-community-adapters <iobroker-community-adapters@gmx.de>
