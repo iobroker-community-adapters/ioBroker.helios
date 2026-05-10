@@ -49,10 +49,8 @@ https://forum.iobroker.net/topic/47762/test-helios-kwl-v0-0-x
 
 ### **WORK IN PROGRESS**
 - (copilot) Adapter requires node.js >= 22 now
-- (iobroker-bot) Adapter requires node.js >= 20 now.
 - (copilot) Adapter requires admin >= 7.7.22 now
 - (copilot) Adapter requires js-controller >= 6.0.11 now
-- (copilot) Adapter requires admin >= 7.6.17 now
 
 ### 0.1.0 (2024-04-17)
 * (mcm1957) Adapter requires node.js 18 and js-controller >= 5 now
