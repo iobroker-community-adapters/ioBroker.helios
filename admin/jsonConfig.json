@@ -1,0 +1,41 @@
+{
+    "type": "panel",
+    "items": {
+        "ip": {
+            "type": "text",
+            "label": "IP",
+            "xs": 12,
+            "sm": 6,
+            "md": 4,
+            "lg": 3,
+            "xl": 3
+        },
+        "password": {
+            "type": "password",
+            "label": "Password",
+            "xs": 12,
+            "sm": 6,
+            "md": 4,
+            "lg": 3,
+            "xl": 3
+        },
+        "interval": {
+            "type": "number",
+            "label": "Interval in seconds",
+            "xs": 12,
+            "sm": 6,
+            "md": 4,
+            "lg": 3,
+            "xl": 3
+        },
+        "updateArray": {
+            "type": "text",
+            "label": "XML pages to be updated in the interval (1-17)",
+            "xs": 12,
+            "sm": 12,
+            "md": 12,
+            "lg": 12,
+            "xl": 12
+        }
+    }
+}
