@@ -46,6 +46,9 @@ https://forum.iobroker.net/topic/47762/test-helios-kwl-v0-0-x
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+- (copilot) **ENHANCED**: Migrated admin configuration UI to jsonConfig and short-form i18n files
+
 ### 0.2.0 (2026-05-10)
 - (copilot) Adapter requires node.js >= 22 now
 - (copilot) Adapter requires admin >= 7.7.22 now
