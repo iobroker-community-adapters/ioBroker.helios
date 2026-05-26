@@ -94,7 +94,6 @@
     "compact": true,
     "connectionType": "local",
     "dataSource": "poll",
-    "materialize": true,
     "dependencies": [
       {
         "js-controller": ">=6.0.11"
@@ -104,7 +103,10 @@
       {
         "admin": ">=7.7.22"
       }
-    ]
+    ],
+    "adminUI": {
+      "config": "materialize"
+    }
   },
   "encryptedNative": [
     "password"
