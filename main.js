@@ -76,7 +76,7 @@ class Helios extends utils.Adapter {
     async updateKWL(statusArray) {
         for (const element of statusArray) {
             if (this.ignorePage.includes(element)) {
-                return;
+                continue;
             }
             await this.sleep(500); //wait to prevent a ECONNRESET
             await this.requestClient({
