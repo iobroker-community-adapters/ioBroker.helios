@@ -90,8 +90,10 @@ class Helios extends utils.Adapter {
                     this.parseResult(res.data);
                 })
                 .catch(error => {
-                    if (error.response && error.response.status === 401) {
-                        this.log.info('Receive 401 error. Refresh Token in 30 seconds');
+                    if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+                        this.log.info(
+                            `Receive ${error.response.status} error. Session seems to be gone, refresh login in 30 seconds`,
+                        );
                         clearTimeout(this.refreshTokenTimeout);
                         this.refreshTokenTimeout = setTimeout(() => {
                             this.login();
