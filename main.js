@@ -12,6 +12,8 @@ class Helios extends utils.Adapter {
         this.on('ready', this.onReady.bind(this));
         this.on('stateChange', this.onStateChange.bind(this));
         this.on('unload', this.onUnload.bind(this));
+        // remembers the object type per datapoint to detect type changes
+        this.knownTypes = {};
     }
 
     async onReady() {
@@ -164,6 +166,25 @@ class Helios extends utils.Adapter {
                         this.log.error(error);
                     });
             }
+            // The KWL delivers every value as a string, so the type of a state can only be guessed
+            // from the value itself. A datapoint that looked numeric on first sight can later carry
+            // text (and states created by v0.1.0 are numeric throughout), which made every following
+            // setState fail with "has to be type number but received type string".
+            // Widen the state to "mixed" once instead of logging an error on every poll.
+            if (this.knownTypes[ID] === undefined) {
+                const currentObject = await this.getObjectAsync(path);
+                this.knownTypes[ID] = currentObject && currentObject.common ? currentObject.common.type : type;
+            }
+            if (this.knownTypes[ID] !== 'mixed' && this.knownTypes[ID] !== type) {
+                this.log.info(
+                    `Type of ${path} (${ID}) changed from ${this.knownTypes[ID]} to ${type}, widening state to mixed`,
+                );
+                await this.extendObjectAsync(path, { common: { type: 'mixed' } }).catch(error => {
+                    this.log.error(error);
+                });
+                this.knownTypes[ID] = 'mixed';
+            }
+
             this.setState(path, VALUE, true).catch(error => {
                 this.log.error(ID);
                 this.log.error(JSON.stringify(dataObject));
